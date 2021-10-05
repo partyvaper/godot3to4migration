@@ -80,18 +80,50 @@ func _process(_delta: float) -> void:
   move_and_slide()
 ```
 
+### const Dictionary
+
+Godot 3
+```gdscript
+const meshes: Dictionary = {
+	rocks = [
+		'res://assets/Rock1.tres',
+		'res://assets/Rock2.tres',
+	],
+	bushes = [
+		'res://assets/Bush1.tres',
+		'res://assets/Bush2.tres',
+	],
+}
+```
+
+Godot 4
+```gdscript
+var meshes: Dictionary = {
+	rocks = [
+		'res://assets/Rock1.tres',
+		'res://assets/Rock2.tres',
+	],
+	bushes = [
+		'res://assets/Bush1.tres',
+		'res://assets/Bush2.tres',
+	],
+}
+```
+
 ### Global methods
 
 Godot 3
 ```gdscript
 rand_range(1, 5)
 rand_range(1.0, 5.0)
+Engine.editor_hint
 ```
 
 Godot 4:
 ```gdscript
 randi_range(1, 5)
 randf_range(1.0, 5.0)
+Engine.is_editor_hint()
 ```
 
 ## Credits
