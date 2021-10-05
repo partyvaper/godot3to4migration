@@ -144,6 +144,7 @@ Godot 3
 rand_range(1, 5)
 rand_range(1.0, 5.0)
 Engine.editor_hint
+OS.get_ticks_msec()
 ```
 
 Godot 4:
@@ -151,6 +152,7 @@ Godot 4:
 randi_range(1, 5)
 randf_range(1.0, 5.0)
 Engine.is_editor_hint()
+Time.get_ticks_msec()
 ```
 
 ## Credits
