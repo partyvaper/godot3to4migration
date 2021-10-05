@@ -110,6 +110,33 @@ var meshes: Dictionary = {
 }
 ```
 
+### Timer Signal TODO
+
+Godot 3
+```gdscript
+var timer = Timer.new()
+timer.wait_time = 5.0
+timer.autostart = true
+timer.connect('timeout', $AnimationPlayer, 'play', ['despawn'])
+```
+
+Godot 4
+```gdscript
+???
+```
+
+### export string dropdown TODO
+
+Godot 3
+```gdscript
+export(String, 'backpack', 'book', 'radio', 'camera') var object_type: String = 'backpack'
+```
+
+Godot 4
+```gdscript
+@export ???
+```
+
 ### Global methods
 
 Godot 3
