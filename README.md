@@ -172,32 +172,47 @@ for action in InputMap.get_action_list(name):
 print(key) # Will print "F" or "Left Click" or "Xbox A, PS X, etc."
 ```
 
-### Global methods
+### Misc renamings of global & node methods
 
 Godot 3
 ```gdscript
 rand_range(1, 5)
 rand_range(1.0, 5.0)
+
 Engine.editor_hint
 OS.get_ticks_msec()
 OS.get_scancode_string()
+
 InputMap.get_action_list('action')
 (action as InputEventKey).scancode
+
 ($Panel as Panel).get_stylebox('panel')
+
 get_viewport().get_camera()
+
+(penguin as Spatial).translation.y = 10.0
+var rot_deg_x = (penguin as Spatial).rotation_degrees.x # or .get_rotation_degrees().x
+
 ```
 
 Godot 4:
 ```gdscript
 randi_range(1, 5)
 randf_range(1.0, 5.0)
+
 Engine.is_editor_hint()
 Time.get_ticks_msec()
 OS.get_keycode_string()
+
 InputMap.action_get_events('action')
 (action as InputEventKey).keycode
+
 ($Panel as Panel).get_theme_stylebox('panel')
+
 get_viewport().get_camera_3d() # or get_camera_2d()
+
+(penguin as Node3D).position.y = 10.0
+var rot_deg_x = rad2deg((penguin as Spatial).rotation.x) # or .get_rotation().x
 ```
 
 ## Credits
