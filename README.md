@@ -147,6 +147,7 @@ Engine.editor_hint
 OS.get_ticks_msec()
 OS.get_scancode_string()
 InputMap.get_action_list('action')
+(action as InputEventKey).scancode
 ($Panel as Panel).get_stylebox('panel')
 ```
 
@@ -158,6 +159,7 @@ Engine.is_editor_hint()
 Time.get_ticks_msec()
 OS.get_keycode_string()
 InputMap.action_get_events('action')
+(action as InputEventKey).keycode
 ($Panel as Panel).get_theme_stylebox('panel')
 ```
 
