@@ -145,6 +145,8 @@ rand_range(1, 5)
 rand_range(1.0, 5.0)
 Engine.editor_hint
 OS.get_ticks_msec()
+OS.get_scancode_string()
+($Panel as Panel).get_stylebox('panel')
 ```
 
 Godot 4:
@@ -153,6 +155,8 @@ randi_range(1, 5)
 randf_range(1.0, 5.0)
 Engine.is_editor_hint()
 Time.get_ticks_msec()
+OS.get_keycode_string()
+($Panel as Panel).get_theme_stylebox('panel')
 ```
 
 ## Credits
