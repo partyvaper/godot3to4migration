@@ -111,7 +111,7 @@ var meshes: Dictionary = {
 }
 ```
 
-### Timer Signal TODO
+### Timer Signal
 
 Godot 3
 ```gdscript
