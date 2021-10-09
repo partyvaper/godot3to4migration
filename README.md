@@ -149,6 +149,7 @@ OS.get_scancode_string()
 InputMap.get_action_list('action')
 (action as InputEventKey).scancode
 ($Panel as Panel).get_stylebox('panel')
+get_viewport().get_camera()
 ```
 
 Godot 4:
@@ -161,6 +162,7 @@ OS.get_keycode_string()
 InputMap.action_get_events('action')
 (action as InputEventKey).keycode
 ($Panel as Panel).get_theme_stylebox('panel')
+get_viewport().get_camera_3d() # or get_camera_2d()
 ```
 
 ## Credits
