@@ -146,6 +146,7 @@ rand_range(1.0, 5.0)
 Engine.editor_hint
 OS.get_ticks_msec()
 OS.get_scancode_string()
+InputMap.get_action_list('action')
 ($Panel as Panel).get_stylebox('panel')
 ```
 
@@ -156,6 +157,7 @@ randf_range(1.0, 5.0)
 Engine.is_editor_hint()
 Time.get_ticks_msec()
 OS.get_keycode_string()
+InputMap.action_get_events('action')
 ($Panel as Panel).get_theme_stylebox('panel')
 ```
 
