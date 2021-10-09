@@ -1,5 +1,8 @@
 # Godot 3 to 4 Migration
-Godot 3.x to Godot 4.x migration guide
+
+Godot 3.x to Godot 4.x gdscript code migration guide
+
+Everyone is free to add pull requests and improvements!
 
 ## Useful resources
 
@@ -11,8 +14,6 @@ Godot 3.x to Godot 4.x migration guide
 * [convert-to-godot4.sh](https://gist.github.com/aaronfranke/79b424226475d277d0035b7835b09c5f) - Shell script that does the same thing.
 
 ## GDScript
-
-TODO: Add more code examples.
 
 ### Tool
 
@@ -122,7 +123,10 @@ timer.connect('timeout', $AnimationPlayer, 'play', ['despawn'])
 
 Godot 4
 ```gdscript
-???
+var timer = Timer.new()
+timer.wait_time = 5.0
+timer.autostart = true
+timer.connect('timeout', Callable($AnimationPlayer, 'play'), ['despawn'])
 ```
 
 ### export string dropdown TODO
@@ -135,6 +139,37 @@ export(String, 'backpack', 'book', 'radio', 'camera') var object_type: String = 
 Godot 4
 ```gdscript
 @export ???
+```
+
+## Find bound key by action name
+
+Godot 3
+```gdscript
+var name = 'key_attack'
+var key = ''
+
+for action in InputMap.get_action_list(name):
+	if action is InputEventKey:
+		key = OS.get_scancode_string(action.scancode)
+	elif action is InputEventJoypadButton:
+		key = Input.get_joy_button_string(action.button_index)
+	elif action is InputEventMouseButton:
+		key = 'Left Click' if action.button_index == BUTTON_LEFT else 'Right Click'
+	else:
+		key = '???'
+
+print(key) # Will print "F" or "Left Click" or "Xbox A, PS X, etc."
+```
+
+Godot 4
+```gdscript
+var name = 'key_attack'
+var key = ''
+
+for action in InputMap.get_action_list(name):
+	key = action.as_text()
+
+print(key) # Will print "F" or "Left Click" or "Xbox A, PS X, etc."
 ```
 
 ### Global methods
