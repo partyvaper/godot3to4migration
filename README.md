@@ -187,6 +187,7 @@ InputMap.get_action_list('action')
 (action as InputEventKey).scancode
 
 ($Panel as Panel).get_stylebox('panel')
+($Control as Control).add_color_override(Color.Red)
 
 get_viewport().get_camera()
 Viewport.UPDATE_DISABLED
@@ -209,6 +210,7 @@ InputMap.action_get_events('action')
 (action as InputEventKey).keycode
 
 ($Panel as Panel).get_theme_stylebox('panel')
+($Control as Control).add_theme_color_override(Color.RED)
 
 get_viewport().get_camera_3d() # or get_camera_2d()
 SubViewport.UPDATE_DISABLED
