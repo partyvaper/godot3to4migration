@@ -189,6 +189,7 @@ InputMap.get_action_list('action')
 ($Panel as Panel).get_stylebox('panel')
 
 get_viewport().get_camera()
+Viewport.UPDATE_DISABLED
 
 (penguin as Spatial).translation.y = 10.0
 var rot_deg_x = (penguin as Spatial).rotation_degrees.x # or .get_rotation_degrees().x
@@ -210,6 +211,7 @@ InputMap.action_get_events('action')
 ($Panel as Panel).get_theme_stylebox('panel')
 
 get_viewport().get_camera_3d() # or get_camera_2d()
+SubViewport.UPDATE_DISABLED
 
 (penguin as Node3D).position.y = 10.0
 var rot_deg_x = rad2deg((penguin as Spatial).rotation.x) # or .get_rotation().x
